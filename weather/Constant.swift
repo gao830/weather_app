@@ -13,6 +13,15 @@ let LONGITUDE = "&lon="
 let APP_ID = "&appid="
 let APP_KEY = "b1b15e88fa797225412429c1c50c122a1"
 let CURRENT_URL = "\(BASE_URL)\(LATTITUDE)35\(LONGITUDE)139\(APP_ID)\(APP_KEY)"
+let URL_EX = "http://samples.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b1b15e88fa797225412429c1c50c122a1"
 typealias DownloadComplete = () -> ()
 
-//lat=35&lon=139&appid=b1b15e88fa797225412429c1c50c122a1
+let FORECAST_URL = "http://samples.openweathermap.org/data/2.5/forecast/daily?lat=35&lon=139&cnt=10&appid=b1b15e88fa797225412429c1c50c122a1"
+
+
+
+
+
+
+
+

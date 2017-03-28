@@ -15,6 +15,7 @@
 		FC8708D11E79D05500984FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8708CF1E79D05500984FAE /* Main.storyboard */; };
 		FC8708D31E79D05500984FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8708D21E79D05500984FAE /* Assets.xcassets */; };
 		FC8708D61E79D05500984FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8708D41E79D05500984FAE /* LaunchScreen.storyboard */; };
+		FC9DE5CE1E8444880014DC9C /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9DE5CD1E8444880014DC9C /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC8708D21E79D05500984FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8708D51E79D05500984FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC8708D71E79D05500984FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC9DE5CD1E8444880014DC9C /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				FC8708CD1E79D05500984FAE /* WeatherVC.swift */,
 				FC7E89C31E7E22A700A4316C /* Constant.swift */,
 				FC7E89C51E7E275000A4316C /* WeatherData.swift */,
+				FC9DE5CD1E8444880014DC9C /* Forecast.swift */,
 				FC8708CF1E79D05500984FAE /* Main.storyboard */,
 				FC8708D21E79D05500984FAE /* Assets.xcassets */,
 				FC8708D41E79D05500984FAE /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				FC8708CC1E79D05500984FAE /* AppDelegate.swift in Sources */,
 				FC7E89C61E7E275000A4316C /* WeatherData.swift in Sources */,
 				FC7E89C41E7E22A700A4316C /* Constant.swift in Sources */,
+				FC9DE5CE1E8444880014DC9C /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
