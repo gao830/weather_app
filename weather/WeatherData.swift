@@ -6,14 +6,14 @@
 //  Copyright © 2017 Yunpeng Gao. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Alamofire
 
 class WeatherData {
-    var _cityName: String!
-    var _date: String!
-    var _weatherType: String!
-    var _currentTemp: Double!
+    private var _cityName: String!
+    private var _date: String!
+    private var _weatherType: String!
+    private var _currentTemp: Double!
     
     var cityName: String {
         if _cityName == nil {
