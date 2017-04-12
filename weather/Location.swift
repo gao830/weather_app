@@ -10,6 +10,9 @@ import Foundation
 import CoreLocation
 
 class Location {
+    static var currentInstance = Location()
+    private init(){}
     
-    
+    var latitude: Double!
+    var longitude: Double!
 }

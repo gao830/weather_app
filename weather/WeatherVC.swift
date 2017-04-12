@@ -32,40 +32,55 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     var foreCast: Forecast!
     var foreCasts = [Forecast]()
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+        currentWeather = WeatherData()
+        currentWeather.downloadWeatherDetails {
+            self.downloadForecastData {
+                self.updateMainUI()
+                print((self.currentWeather.cityName))
+                print("hi")
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+        
         locationManager.startMonitoringSignificantLocationChanges()
         
         
         tableView.delegate = self
         tableView.dataSource = self
-    
-        currentWeather = WeatherData()
-//        foreCast = Forecast()
-        currentWeather.downloadWeatherDetails {
-            self.downloadForecastData {
-                self.updateMainUI()
-                print("hi")
-            }
-            
-        }
        
     }
     
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
             currentLocation = locationManager.location
+            print(currentLocation.coordinate.latitude)
+            print(currentLocation.coordinate.longitude)
+            Location.currentInstance.latitude = currentLocation.coordinate.latitude
+            Location.currentInstance.longitude = currentLocation.coordinate.longitude
+//
+            
         } else {
             locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
         }
     }
     
     func downloadForecastData (completed: DownloadComplete) {
         let forecastURL = URL(string: FORECAST_URL)!
+        print(FORECAST_URL)
         Alamofire.request(forecastURL).responseJSON { response in
             let result = response.result
 //            print(response)
@@ -77,7 +92,6 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
                         self.foreCasts.append(forecast)
                         print(forecast.date)
                     }
-                    
                     
                 }
             }
